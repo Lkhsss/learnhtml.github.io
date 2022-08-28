@@ -1,4 +1,4 @@
-# 学习笔记 + BUG + LOG {ignore}
+# html学习笔记 + BUG归总 {ignore}
 
 **[返回首页](../../index.html) 或者 [前往“学习之路”](../%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.html)**
 
