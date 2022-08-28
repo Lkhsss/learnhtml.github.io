@@ -1,4 +1,6 @@
 .small-yellow{
     color: yellow;
     background-color: black;
+    text-align: center;
+    font-size: small;
 }
