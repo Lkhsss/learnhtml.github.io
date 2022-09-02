@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cmn-hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常见样式声明</title>
+  </head>
+  <body>
+    <div>
+      <a href="./笔记/常见样式声明.html">查看笔记</a>
+    </div>
+    <div>
+      <!-- color -->
+      <p style="color: red" id="color">color: 指元素内部文字的颜色</p>
+      <div style="background-color: black">
+        <p style="color: rgb(255, 0, 0)">rgb(255,0,0)表示红色</p>
+        <p style="color: rgb(255, 255, 0)">rgb(255,255,0)表示黄色</p>
+        <p style="color: rgb(0, 255, 0)">rgb(0,255,0)表示绿色</p>
+        <p style="color: rgb(0, 0, 255)">rgb(0,0,255)表示蓝色</p>
+      </div>
+      <p style="color: #008c07">#008c8c表示马尔斯绿</p>
+    </div>
+    <div>
+      <!-- background-color -->
+      <p style="background-color: red">background-color属性可以设置背景颜色</p>
+    </div>
+    <div>
+      <!-- font-size -->
+      <p>
+        按照规则，p元素将继承div元素的字体大小，如果div也没有，那么将再继承div元素的父元素的字体大小，以此类推
+      </p>
+      <p style="font-size: 2em">
+        如果设置字体大小为2em，那么此p元素的字体将是其父元素字体大小的两倍
+      </p>
+    </div>
+    <div>
+      <!-- font-weight -->
+      <p style="font-weight: nomal">正常字体粗细</p>
+      <p style="font-weight: bold">字体加粗</p>
+    </div>
+    <div>
+      <!-- font-family -->
+      <p style="font-family: fangsong,sans-serif;font-size: 2em;">仿宋字体</p>
+    </div>
+    <div>
+      <!-- font-style -->
+      <p style="font-style: italic;font-size: 1.5em;">字体倾斜</p>
+    </div>
+    <div>
+      <!-- text-decoration -->
+      <p style="text-decoration: line-through;">划掉</p>
+      <p style="text-decoration: overline;">上划线</p>
+      <p style="text-decoration: underline;">下划掉</p>
+    </div>
+    <footer>
+      <a href="./笔记/常见样式声明.html">查看笔记</a>
+      <div style="text-align: center">
+        <a href="../index.html" style="display: block">返回主页</a
+        ><a href="./学习之路.html" style="display: block">返回CSS学习之路</a>
+      </div>
+    </footer>
+  </body>
+</html>

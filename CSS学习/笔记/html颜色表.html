@@ -1,0 +1,990 @@
+<!DOCTYPE html><html><head>
+      <title>html&#x989C;&#x8272;&#x8868;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><strong><a href="../../index.html">&#x8FD4;&#x56DE;&#x9996;&#x9875;</a> &#x6216;&#x8005; <a href="../%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.html">&#x524D;&#x5F80;&#x201C;&#x5B66;&#x4E60;&#x4E4B;&#x8DEF;&#x201D;</a></strong><br>
+<a href="../%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F%E5%A3%B0%E6%98%8E.html">&#x8FD4;&#x56DE;&#x7F51;&#x9875;</a></p>
+<h1 class="mume-header" id="%E7%82%B9%E5%87%BB%E5%8F%AF%E5%89%8D%E5%BE%80%E8%8F%9C%E9%B8%9F%E7%BC%96%E7%A8%8B%E6%9F%A5%E7%9C%8B%E8%AF%A6%E6%83%85">&#x70B9;&#x51FB;&#x53EF;&#x524D;&#x5F80;&#x83DC;&#x9E1F;&#x7F16;&#x7A0B;&#x67E5;&#x770B;&#x8BE6;&#x60C5;</h1>
+
+<table>
+<tbody><tr>
+<th align="left" width="25%">&#x989C;&#x8272;&#x540D;&#x5B57;</th>
+<th align="left" width="15%">16&#x8FDB;&#x5236;</th>
+<th align="left" width="43%">&#x989C;&#x8272;&#x9884;&#x89C8;</th>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=AliceBlue">AliceBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F0F8FF">#F0F8FF</a></td>
+<td bgcolor="#F0F8FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=AntiqueWhite">AntiqueWhite</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FAEBD7">#FAEBD7</a></td>
+<td bgcolor="#FAEBD7">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Aqua">Aqua</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00FFFF">#00FFFF</a></td>
+<td bgcolor="#00FFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Aquamarine">Aquamarine</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=7FFFD4">#7FFFD4</a></td>
+<td bgcolor="#7FFFD4">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Azure">Azure</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F0FFFF">#F0FFFF</a></td>
+<td bgcolor="#F0FFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Beige">Beige</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F5F5DC">#F5F5DC</a></td>
+<td bgcolor="#F5F5DC">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Bisque">Bisque</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFE4C4">#FFE4C4</a></td>
+<td bgcolor="#FFE4C4">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Black">Black</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=000000">#000000</a></td>
+<td bgcolor="#000000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=BlanchedAlmond">BlanchedAlmond</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFEBCD">#FFEBCD</a></td>
+<td bgcolor="#FFEBCD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Blue">Blue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=0000FF">#0000FF</a></td>
+<td bgcolor="#0000FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=BlueViolet">BlueViolet</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=8A2BE2">#8A2BE2</a></td>
+<td bgcolor="#8A2BE2">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Brown">Brown</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=A52A2A">#A52A2A</a></td>
+<td bgcolor="#A52A2A">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=BurlyWood">BurlyWood</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DEB887">#DEB887</a></td>
+<td bgcolor="#DEB887">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=CadetBlue">CadetBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=5F9EA0">#5F9EA0</a></td>
+<td bgcolor="#5F9EA0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Chartreuse">Chartreuse</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=7FFF00">#7FFF00</a></td>
+<td bgcolor="#7FFF00">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Chocolate">Chocolate</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=D2691E">#D2691E</a></td>
+<td bgcolor="#D2691E">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Coral">Coral</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF7F50">#FF7F50</a></td>
+<td bgcolor="#FF7F50">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=CornflowerBlue">CornflowerBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=6495ED">#6495ED</a></td>
+<td bgcolor="#6495ED">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Cornsilk">Cornsilk</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFF8DC">#FFF8DC</a></td>
+<td bgcolor="#FFF8DC">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Crimson">Crimson</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DC143C">#DC143C</a></td>
+<td bgcolor="#DC143C">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Cyan">Cyan</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00FFFF">#00FFFF</a></td>
+<td bgcolor="#00FFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkBlue">DarkBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00008B">#00008B</a></td>
+<td bgcolor="#00008B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkCyan">DarkCyan</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=008B8B">#008B8B</a></td>
+<td bgcolor="#008B8B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkGoldenRod">DarkGoldenRod</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=B8860B">#B8860B</a></td>
+<td bgcolor="#B8860B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkGray">DarkGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=A9A9A9">#A9A9A9</a></td>
+<td bgcolor="#A9A9A9">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkGreen">DarkGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=006400">#006400</a></td>
+<td bgcolor="#006400">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkKhaki">DarkKhaki</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=BDB76B">#BDB76B</a></td>
+<td bgcolor="#BDB76B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkMagenta">DarkMagenta</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=8B008B">#8B008B</a></td>
+<td bgcolor="#8B008B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkOliveGreen">DarkOliveGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=556B2F">#556B2F</a></td>
+<td bgcolor="#556B2F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkOrange">DarkOrange</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF8C00">#FF8C00</a></td>
+<td bgcolor="#FF8C00">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkOrchid">DarkOrchid</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=9932CC">#9932CC</a></td>
+<td bgcolor="#9932CC">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkRed">DarkRed</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=8B0000">#8B0000</a></td>
+<td bgcolor="#8B0000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkSalmon">DarkSalmon</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=E9967A">#E9967A</a></td>
+<td bgcolor="#E9967A">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkSeaGreen">DarkSeaGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=8FBC8F">#8FBC8F</a></td>
+<td bgcolor="#8FBC8F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkSlateBlue">DarkSlateBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=483D8B">#483D8B</a></td>
+<td bgcolor="#483D8B">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkSlateGray">DarkSlateGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=2F4F4F">#2F4F4F</a></td>
+<td bgcolor="#2F4F4F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkTurquoise">DarkTurquoise</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00CED1">#00CED1</a></td>
+<td bgcolor="#00CED1">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DarkViolet">DarkViolet</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=9400D3">#9400D3</a></td>
+<td bgcolor="#9400D3">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DeepPink">DeepPink</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF1493">#FF1493</a></td>
+<td bgcolor="#FF1493">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DeepSkyBlue">DeepSkyBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00BFFF">#00BFFF</a></td>
+<td bgcolor="#00BFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DimGray">DimGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=696969">#696969</a></td>
+<td bgcolor="#696969">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=DodgerBlue">DodgerBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=1E90FF">#1E90FF</a></td>
+<td bgcolor="#1E90FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=FireBrick">FireBrick</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=B22222">#B22222</a></td>
+<td bgcolor="#B22222">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=FloralWhite">FloralWhite</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFAF0">#FFFAF0</a></td>
+<td bgcolor="#FFFAF0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=ForestGreen">ForestGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=228B22">#228B22</a></td>
+<td bgcolor="#228B22">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Fuchsia">Fuchsia</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF00FF">#FF00FF</a></td>
+<td bgcolor="#FF00FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Gainsboro">Gainsboro</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DCDCDC">#DCDCDC</a></td>
+<td bgcolor="#DCDCDC">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=GhostWhite">GhostWhite</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F8F8FF">#F8F8FF</a></td>
+<td bgcolor="#F8F8FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Gold">Gold</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFD700">#FFD700</a></td>
+<td bgcolor="#FFD700">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=GoldenRod">GoldenRod</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DAA520">#DAA520</a></td>
+<td bgcolor="#DAA520">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Gray">Gray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=808080">#808080</a></td>
+<td bgcolor="#808080">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Green">Green</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=008000">#008000</a></td>
+<td bgcolor="#008000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=GreenYellow">GreenYellow</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=ADFF2F">#ADFF2F</a></td>
+<td bgcolor="#ADFF2F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=HoneyDew">HoneyDew</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F0FFF0">#F0FFF0</a></td>
+<td bgcolor="#F0FFF0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=HotPink">HotPink</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF69B4">#FF69B4</a></td>
+<td bgcolor="#FF69B4">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=IndianRed ">IndianRed </a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=CD5C5C">#CD5C5C</a></td>
+<td bgcolor="#CD5C5C">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Indigo  ">Indigo  </a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=4B0082">#4B0082</a></td>
+<td bgcolor="#4B0082">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Ivory">Ivory</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFFF0">#FFFFF0</a></td>
+<td bgcolor="#FFFFF0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Khaki">Khaki</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F0E68C">#F0E68C</a></td>
+<td bgcolor="#F0E68C">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Lavender">Lavender</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=E6E6FA">#E6E6FA</a></td>
+<td bgcolor="#E6E6FA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LavenderBlush">LavenderBlush</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFF0F5">#FFF0F5</a></td>
+<td bgcolor="#FFF0F5">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LawnGreen">LawnGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=7CFC00">#7CFC00</a></td>
+<td bgcolor="#7CFC00">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LemonChiffon">LemonChiffon</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFACD">#FFFACD</a></td>
+<td bgcolor="#FFFACD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightBlue">LightBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=ADD8E6">#ADD8E6</a></td>
+<td bgcolor="#ADD8E6">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightCoral">LightCoral</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F08080">#F08080</a></td>
+<td bgcolor="#F08080">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightCyan">LightCyan</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=E0FFFF">#E0FFFF</a></td>
+<td bgcolor="#E0FFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightGoldenRodYellow">LightGoldenRodYellow</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FAFAD2">#FAFAD2</a></td>
+<td bgcolor="#FAFAD2">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightGray">LightGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=D3D3D3">#D3D3D3</a></td>
+<td bgcolor="#D3D3D3">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightGreen">LightGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=90EE90">#90EE90</a></td>
+<td bgcolor="#90EE90">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightPink">LightPink</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFB6C1">#FFB6C1</a></td>
+<td bgcolor="#FFB6C1">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightSalmon">LightSalmon</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFA07A">#FFA07A</a></td>
+<td bgcolor="#FFA07A">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightSeaGreen">LightSeaGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=20B2AA">#20B2AA</a></td>
+<td bgcolor="#20B2AA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightSkyBlue">LightSkyBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=87CEFA">#87CEFA</a></td>
+<td bgcolor="#87CEFA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightSlateGray">LightSlateGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=778899">#778899</a></td>
+<td bgcolor="#778899">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightSteelBlue">LightSteelBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=B0C4DE">#B0C4DE</a></td>
+<td bgcolor="#B0C4DE">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LightYellow">LightYellow</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFFE0">#FFFFE0</a></td>
+<td bgcolor="#FFFFE0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Lime">Lime</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00FF00">#00FF00</a></td>
+<td bgcolor="#00FF00">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=LimeGreen">LimeGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=32CD32">#32CD32</a></td>
+<td bgcolor="#32CD32">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Linen">Linen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FAF0E6">#FAF0E6</a></td>
+<td bgcolor="#FAF0E6">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Magenta">Magenta</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF00FF">#FF00FF</a></td>
+<td bgcolor="#FF00FF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Maroon">Maroon</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=800000">#800000</a></td>
+<td bgcolor="#800000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumAquaMarine">MediumAquaMarine</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=66CDAA">#66CDAA</a></td>
+<td bgcolor="#66CDAA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumBlue">MediumBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=0000CD">#0000CD</a></td>
+<td bgcolor="#0000CD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumOrchid">MediumOrchid</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=BA55D3">#BA55D3</a></td>
+<td bgcolor="#BA55D3">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumPurple">MediumPurple</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=9370DB">#9370DB</a></td>
+<td bgcolor="#9370DB">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumSeaGreen">MediumSeaGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=3CB371">#3CB371</a></td>
+<td bgcolor="#3CB371">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumSlateBlue">MediumSlateBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=7B68EE">#7B68EE</a></td>
+<td bgcolor="#7B68EE">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumSpringGreen">MediumSpringGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00FA9A">#00FA9A</a></td>
+<td bgcolor="#00FA9A">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumTurquoise">MediumTurquoise</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=48D1CC">#48D1CC</a></td>
+<td bgcolor="#48D1CC">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MediumVioletRed">MediumVioletRed</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=C71585">#C71585</a></td>
+<td bgcolor="#C71585">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MidnightBlue">MidnightBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=191970">#191970</a></td>
+<td bgcolor="#191970">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MintCream">MintCream</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F5FFFA">#F5FFFA</a></td>
+<td bgcolor="#F5FFFA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=MistyRose">MistyRose</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFE4E1">#FFE4E1</a></td>
+<td bgcolor="#FFE4E1">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Moccasin">Moccasin</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFE4B5">#FFE4B5</a></td>
+<td bgcolor="#FFE4B5">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=NavajoWhite">NavajoWhite</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFDEAD">#FFDEAD</a></td>
+<td bgcolor="#FFDEAD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Navy">Navy</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=000080">#000080</a></td>
+<td bgcolor="#000080">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=OldLace">OldLace</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FDF5E6">#FDF5E6</a></td>
+<td bgcolor="#FDF5E6">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Olive">Olive</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=808000">#808000</a></td>
+<td bgcolor="#808000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=OliveDrab">OliveDrab</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=6B8E23">#6B8E23</a></td>
+<td bgcolor="#6B8E23">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Orange">Orange</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFA500">#FFA500</a></td>
+<td bgcolor="#FFA500">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=OrangeRed">OrangeRed</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF4500">#FF4500</a></td>
+<td bgcolor="#FF4500">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Orchid">Orchid</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DA70D6">#DA70D6</a></td>
+<td bgcolor="#DA70D6">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PaleGoldenRod">PaleGoldenRod</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=EEE8AA">#EEE8AA</a></td>
+<td bgcolor="#EEE8AA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PaleGreen">PaleGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=98FB98">#98FB98</a></td>
+<td bgcolor="#98FB98">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PaleTurquoise">PaleTurquoise</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=AFEEEE">#AFEEEE</a></td>
+<td bgcolor="#AFEEEE">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PaleVioletRed">PaleVioletRed</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DB7093">#DB7093</a></td>
+<td bgcolor="#DB7093">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PapayaWhip">PapayaWhip</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFEFD5">#FFEFD5</a></td>
+<td bgcolor="#FFEFD5">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PeachPuff">PeachPuff</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFDAB9">#FFDAB9</a></td>
+<td bgcolor="#FFDAB9">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Peru">Peru</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=CD853F">#CD853F</a></td>
+<td bgcolor="#CD853F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Pink">Pink</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFC0CB">#FFC0CB</a></td>
+<td bgcolor="#FFC0CB">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Plum">Plum</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=DDA0DD">#DDA0DD</a></td>
+<td bgcolor="#DDA0DD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=PowderBlue">PowderBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=B0E0E6">#B0E0E6</a></td>
+<td bgcolor="#B0E0E6">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Purple">Purple</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=800080">#800080</a></td>
+<td bgcolor="#800080">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Red">Red</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF0000">#FF0000</a></td>
+<td bgcolor="#FF0000">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=RosyBrown">RosyBrown</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=BC8F8F">#BC8F8F</a></td>
+<td bgcolor="#BC8F8F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=RoyalBlue">RoyalBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=4169E1">#4169E1</a></td>
+<td bgcolor="#4169E1">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SaddleBrown">SaddleBrown</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=8B4513">#8B4513</a></td>
+<td bgcolor="#8B4513">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Salmon">Salmon</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FA8072">#FA8072</a></td>
+<td bgcolor="#FA8072">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SandyBrown">SandyBrown</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F4A460">#F4A460</a></td>
+<td bgcolor="#F4A460">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SeaGreen">SeaGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=2E8B57">#2E8B57</a></td>
+<td bgcolor="#2E8B57">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SeaShell">SeaShell</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFF5EE">#FFF5EE</a></td>
+<td bgcolor="#FFF5EE">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Sienna">Sienna</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=A0522D">#A0522D</a></td>
+<td bgcolor="#A0522D">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Silver">Silver</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=C0C0C0">#C0C0C0</a></td>
+<td bgcolor="#C0C0C0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SkyBlue">SkyBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=87CEEB">#87CEEB</a></td>
+<td bgcolor="#87CEEB">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SlateBlue">SlateBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=6A5ACD">#6A5ACD</a></td>
+<td bgcolor="#6A5ACD">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SlateGray">SlateGray</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=708090">#708090</a></td>
+<td bgcolor="#708090">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Snow">Snow</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFAFA">#FFFAFA</a></td>
+<td bgcolor="#FFFAFA">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SpringGreen">SpringGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=00FF7F">#00FF7F</a></td>
+<td bgcolor="#00FF7F">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=SteelBlue">SteelBlue</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=4682B4">#4682B4</a></td>
+<td bgcolor="#4682B4">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Tan">Tan</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=D2B48C">#D2B48C</a></td>
+<td bgcolor="#D2B48C">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Teal">Teal</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=008080">#008080</a></td>
+<td bgcolor="#008080">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Thistle">Thistle</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=D8BFD8">#D8BFD8</a></td>
+<td bgcolor="#D8BFD8">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Tomato">Tomato</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FF6347">#FF6347</a></td>
+<td bgcolor="#FF6347">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Turquoise">Turquoise</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=40E0D0">#40E0D0</a></td>
+<td bgcolor="#40E0D0">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Violet">Violet</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=EE82EE">#EE82EE</a></td>
+<td bgcolor="#EE82EE">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Wheat">Wheat</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F5DEB3">#F5DEB3</a></td>
+<td bgcolor="#F5DEB3">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=White">White</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFFFF">#FFFFFF</a></td>
+<td bgcolor="#FFFFFF">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=WhiteSmoke">WhiteSmoke</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=F5F5F5">#F5F5F5</a></td>
+<td bgcolor="#F5F5F5">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=Yellow">Yellow</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=FFFF00">#FFFF00</a></td>
+<td bgcolor="#FFFF00">&#xA0;</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?color=YellowGreen">YellowGreen</a>&#xA0;</td>
+<td align="left"><a target="_blank" href="https://www.runoob.com/try/color.php?hex=9ACD32">#9ACD32</a></td>
+<td bgcolor="#9ACD32">&#xA0;</td>
+</tr>
+</tbody></table>
+<p><strong><a href="../../index.html">&#x8FD4;&#x56DE;&#x9996;&#x9875;</a> &#x6216;&#x8005; <a href="../%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.html">&#x524D;&#x5F80;&#x201C;&#x5B66;&#x4E60;&#x4E4B;&#x8DEF;&#x201D;</a></strong><br>
+<a href="../%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F%E5%A3%B0%E6%98%8E.html">&#x8FD4;&#x56DE;&#x7F51;&#x9875;</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
